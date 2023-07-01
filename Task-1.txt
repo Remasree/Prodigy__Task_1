@@ -1,0 +1,70 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Navigation Menu</title>
+  <style>
+    /* CSS code here */
+     .navigation {
+  position: fixed;
+  top: 10;
+  left: 10;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 20;
+  padding: 20;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navigation li {
+  display: inline-block;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #333333;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: #ff00f2;
+}
+
+  </style>
+  <script>
+    // JavaScript code here
+    window.addEventListener('scroll', function() {
+  var navigation = document.querySelector('.navigation');
+  if (window.scrollY > 0) {
+    navigation.style.backgroundColor = '#f2f2f2';
+  } else {
+    navigation.style.backgroundColor = '#ffffff';
+  }
+});
+
+  </script>
+</head>
+<body>
+  <!-- HTML code here -->
+  <nav class="navigation">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+</body>
+</html>
